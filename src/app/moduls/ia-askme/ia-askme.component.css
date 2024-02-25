@@ -2,11 +2,44 @@
     margin: 0%;
     padding: 0%;
 }
-
+h2{
+    font-size: xx-large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .ia-container{
-    height: 90vh;
+    padding-top: 4rem;
+    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+.chatbox-container{
+    border: 1px solid black;
+    height: 100%;
+    width: 60%;
+    float: inline-end;
+    float: right;    
+    margin-right: 3rem;
+}
+.response-container{
+    height: 60vh;
+    width: 100%;
+    border: 1px solid black;
+    
+}
+.body-ia{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.imagen{
+    width: 70%;
+    margin-right: 0%;
 }

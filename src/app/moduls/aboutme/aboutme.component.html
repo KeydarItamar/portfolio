@@ -1,3 +1,25 @@
+
 <div class="about-container">
     <h2>About me</h2>
+    <div class="container">
+        <div class="descripcion"> 
+         <p>{{ description }}</p>
+        </div>
+        <div class="skills">
+            <h3>Skills</h3>
+            <ul>
+                <li *ngFor="let skill of skills">{{ skill }}</li>
+            </ul>
+        </div>
+                 
+        <div class="social-links">
+        <h3>Follow Me</h3>
+        <ul>
+            <li *ngFor="let link of socialLinks">
+            <a [href]="link.url" target="_blank">{{ link.name }}</a>
+            </li>
+        </ul>
+        </div>
+
+    </div> 
 </div>
