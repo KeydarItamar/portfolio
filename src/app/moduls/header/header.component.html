@@ -1,0 +1,9 @@
+<nav>
+    <div class="header-container">
+        <h1>Itamar Keydar</h1>
+        <ul *ngFor="let modul of modulos ">
+            <li><a (click)="scrollToSection(modul)">{{modul}}</a></li>
+        </ul>
+        <button class="dark-theme" (click)="DarkMode()">dark button</button>
+    </div>
+</nav>
