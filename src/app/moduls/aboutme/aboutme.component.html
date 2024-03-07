@@ -2,24 +2,69 @@
 <div class="about-container">
     <h2>About me</h2>
     <div class="container">
-        <div class="descripcion"> 
-         <p>{{ description }}</p>
-        </div>
-        <div class="skills">
-            <h3>Skills</h3>
+      <div class="card Technologies" (mouseenter)="expandCard('Technologies')" (mouseleave)="collapseCards()">
+        <h2>Technologies</h2>
+        <div class="info" *ngIf="expandedCard === 'Technologies'">
             <ul>
-                <li *ngFor="let skill of skills">{{ skill }}</li>
+                <li>Html, css, Javascript </li>
+                <li>Python, FastApi, Django</li>
+                <li>Java, Spring Boot</li>
+                <li>Php, Laravel</li>
+                <li>Sql, Postgress</li>
+                <li>Git & Github/Gitlab</li>
             </ul>
+            <br>
+            <p>This is done with Angular!</p>
         </div>
-                 
-        <div class="social-links">
-        <h3>Follow Me</h3>
-        <ul>
-            <li *ngFor="let link of socialLinks">
-            <a [href]="link.url" target="_blank">{{ link.name }}</a>
-            </li>
-        </ul>
+      </div>
+      <div class="card Soft Skills" (mouseenter)="expandCard('SoftSkills')" (mouseleave)="collapseCards()">
+        <h2>SoftSkills</h2>
+        <div class="info" *ngIf="expandedCard === 'SoftSkills'">
+          <!-- Texto relevante para SoftSkills -->
+          <ul>
+           <li> Enthusiastic</li>
+           <li> Highly self-sufficient </li>
+           <li> Friendly </li>
+           <li> Effective mentor</li>
+           <li> Quick learner</li>
+           <li> Strong public speaking skills</li>
+          </ul>
         </div>
+      </div>
+      <div class="card Who" (mouseenter)="expandCard('Who')" (mouseleave)="collapseCards()">
+        <h2>Experience</h2>
+        <div class="info" *ngIf="expandedCard === 'Who'">
+            <ul>
+                <li>Graduated in Web Application Development</li>
+                <li>Completed a four months internship at Irish Technology.</li>
+                <li>Self-educated through numerous online courses</li>
+            </ul>
+            <a href="https://www.linkedin.com/in/itamar-keydar-antoni-a4970726a">
+                <img class="link-icono" src="../../../assets/iconos/icons8-linkedin-svg.webp" alt="linkedin-link">
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    </div> 
-</div>
+
+
+
+<!-- <div class="descripcion"> 
+    <p>{{ description }}</p>
+   </div>
+   <div class="skills">
+       <h3>Skills</h3>
+       <ul>
+           <li *ngFor="let skill of skills">{{ skill }}</li>
+       </ul>
+   </div>
+            
+   <div class="social-links">
+   <h3>Follow Me</h3>
+   <ul>
+       <li *ngFor="let link of socialLinks">
+       <a [href]="link.url" target="_blank">{{ link.name }}</a>
+       </li>
+   </ul>
+   </div> -->

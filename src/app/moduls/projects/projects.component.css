@@ -6,7 +6,7 @@ h2{
     font-size: xx-large;
 }
 .project-container{
-    padding-top: 4rem;
+    padding-top: 5rem;
     height: 90vh;
     width: 100%;
     display: flex;
@@ -15,7 +15,6 @@ h2{
     flex-direction: column;
 }
 .router-div{
-    border: 1px solid green;
     height: 100%;
     width: 100%;
 }
@@ -34,3 +33,6 @@ ul{
     list-style: none;
 }   
 
+li:hover{
+    cursor: pointer;
+}

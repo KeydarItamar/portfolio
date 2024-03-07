@@ -10,8 +10,10 @@ import { AboutmeComponent } from './moduls/aboutme/aboutme.component';
 import { ProjectsComponent } from './moduls/projects/projects.component';
 import { IaAskmeComponent } from './moduls/ia-askme/ia-askme.component';
 import { ContactComponent } from './moduls/contact/contact.component';
-import { Project1Component } from './moduls/project1/project1.component';
-
+import { Project1Component } from './moduls/Crypto/project1.component';
+import { HackatonComponent } from './moduls/hackaton/hackaton.component';
+import { PokeapiComponent } from './moduls/pokeapi/pokeapi.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,12 +24,15 @@ import { Project1Component } from './moduls/project1/project1.component';
     ProjectsComponent,
     IaAskmeComponent,
     ContactComponent,
-    Project1Component
+    Project1Component,
+    HackatonComponent,
+    PokeapiComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

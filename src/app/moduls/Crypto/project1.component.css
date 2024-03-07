@@ -1,0 +1,77 @@
+main{
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+.buscador{
+    height: 60vh;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+h3{
+    display: flex;
+    justify-content: flex-start;
+}
+.description{
+    padding-left: 5%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+
+}
+.techno{
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+}
+.input-box{
+    display:flex ;
+    flex-direction: column;
+    margin: 10%;
+    width: 70%; 
+}
+
+.cripto-container{
+    width: 50%;
+    overflow: auto;
+}
+
+.cards {
+    height: 40vh;
+    width: 50%;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    padding: 30px;
+    margin-bottom: 50px;
+  }
+  
+  /* Estilos para cada tarjeta */
+   .card {
+    max-width: 500px;
+    background-color: var(--underline-color);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow:  3px 5px #dc0965;
+    color: var(--underline-color);
+  }
+li{
+    margin-left: 5%;
+}
+
+input{
+    margin-top: 1%;
+    height: 2.3rem;
+    width: 100%;
+    box-shadow:  3px 5px #dc0965;
+    background-color:var(--underline-color);
+    color: var(--underline-color);;
+}

@@ -7,3 +7,25 @@
 .titulos{
     font-size: x-large;
 }
+
+
+/* .name:hover{
+  animation: wobble;
+  animation-duration: 2s;
+} */
+
+h1, h2 {
+    position: relative; /* Necesario para la animación */
+    left: -1000px; /* Inicialmente fuera de la pantalla */
+    animation: slideIn 1s forwards; /* Aplicar animación */
+  }
+
+  /* Definición de la animación */
+  @keyframes slideIn {
+    from {
+      left: -1000px; /* Fuera de la pantalla a la izquierda */
+    }
+    to {
+      left: 0; /* Llega a su posición original */
+    }
+  }

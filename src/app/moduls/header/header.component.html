@@ -1,9 +1,14 @@
-<nav>
+
+<nav [style.background-color]="backgroundColor" [style.color]="fontColor">
     <div class="header-container">
-        <h1>Itamar Keydar</h1>
+        <h1 class="name">Itamar Keydar</h1>
         <ul *ngFor="let modul of modulos ">
-            <li><a (click)="scrollToSection(modul)">{{modul}}</a></li>
+            <li id="lista" [class.active]="activeTab === modul" ><a (click)="scrollToSection(modul)">{{modul}}</a></li>
         </ul>
-        <button class="dark-theme" (click)="DarkMode()">dark button</button>
+        <label class="switch">
+            <input class="toggle" (click)="DarkMode()" type="checkbox">
+            <span class="slider"></span>
+            <span class="card-side"></span>
+        </label>
     </div>
 </nav>
