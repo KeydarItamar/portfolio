@@ -12,10 +12,12 @@ modulos: string[] = ['Home', 'About me', 'Projects', 'Ia ask me', 'Contact', ]
 backgroundColor: string = '#fff';
 fontColor: string = '#1f1f1f'
 underlineColor: string = '#1f1f1f';
-// colorLi = document.getElementById('lista');
+darkboolean= false;
+imageColor: string = ''
+
+ constructor(private el: ElementRef, private dark: DarkService, private elRef: ElementRef ) {}
 
 
-constructor(private el: ElementRef, private dark: DarkService ) {}
 
 setActiveTab(tab: string) {
   this.activeTab = tab;
@@ -28,20 +30,30 @@ scrollToSection(sectionId: string) {
     section.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }
+changeImageColor() {
+  // Cambiar el color de la imagen utilizando el servicio
+  this.dark.setImageColor('black');
+}
 
 
 DarkMode(){
   this.dark.DarkMode()
   if(this.backgroundColor =='#fff' ){
+    this.darkboolean = true
     this.backgroundColor = '#1f1f1f';
     this.fontColor= '#fff';
     this.el.nativeElement.style.setProperty('--underline-color', '#fff');
+    // this.el.nativeElement.style.setProperty('--main-color', 'red');
+
     
   }else{
+    this.darkboolean = false
     this.backgroundColor = '#fff';
     this.fontColor= '#1f1f1f'
-    this.el.nativeElement.style.setProperty('--underline-color', '#1f1f1f');  }
-  
+    this.el.nativeElement.style.setProperty('--underline-color', '#1f1f1f');  
+
+  }
+
 }
 
 

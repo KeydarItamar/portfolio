@@ -1,16 +1,53 @@
 <body>
     <main>
         <section>
-            <div  class="elem el1 num1"><h1>Pokeapi</h1></div>
-            <div  class="elem el2 num2"><span>2</span></div>
-            <div  class="elem el3 num3"><span>{{pokemonList}}</span></div>
-            <div  class="elem el4 num4"><label for="id">Num:</label><input #numInput type="number" (change)="obtenerValor()"></div>
-            <div  class="elem el5 num5">
-                <div class="img-div"><img src={{urlspritePokemon}} alt=""></div>
+            <div  class="elem el1 num1"><h1>Pokedex</h1></div>
+            <div  class="elem el2 num2">
+              <div class="img-div" *ngFor="let uri of urlspritePokemon"><img *ngIf="uri" src={{uri}} alt=""></div>
             </div>
-            <div  class="elem el1 num6"><span>6</span></div>
-            <div  class="elem el2 num7"><div class="img-div"><img src={{urlImagenPokemon}} alt=""></div></div>
-            <div  class="elem el3 num8"><span>8</span></div>
-            <div  class="elem el4 num9"><span>9</span></div>
+            <div  class="elem el3 num3">
+              <canvas id="myChart"></canvas>
+
+            </div>
+            <div  class="elem el4 num4"><label for="id" style="padding-left: 2%;">Num:</label><input value="1" #numInput type="number" (change)="obtenerValor()"></div>
+            <div  class="elem el5 num5" #chart>
+              
+            <h2>{{pokemonName}}</h2>
+            <ul>
+              <li><strong>Size:</strong></li>
+              <li>Height: {{pokemonHeight}}</li>
+              <li>Weight: {{pokemonWeight}}</li>
+              <li><strong>Type:</strong></li>
+              <li *ngFor="let type of pokemonTypes">{{ type }}</li>
+            </ul> 
+        
+            </div>
+            <div  class="elem el1 num6">
+              <div class="img-div-grande"><img src={{urlImagenPokemon}} alt=""></div>
+            
+            </div>
+            <div  class="elem el2 num7">
+              <table>
+                <thead>
+                  <tr>
+                    <th class="th-izq">Stat</th>
+                    <th class="th-der">Base Stat</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let stat of pokemonStats">
+                    <td class="td-izq">{{ stat.stat.name }}</td>
+                    <td class="td-der">{{ stat.base_stat }}</td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+            <div  class="elem el3 num8" >
+                <div class="div-hab" *ngFor="let ability of pokemonAbilities">
+                <span class="hab">Ability: {{ability.ability.name}}</span>
+                </div>
+            </div>
+            <div  class="elem el4 num9"><p class="description">{{pokemoDesc}}</p></div>
         </section>
 </main>
+

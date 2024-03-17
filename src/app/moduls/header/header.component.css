@@ -60,9 +60,11 @@ li.active a:hover::after {
     gap: 30px;
     width: 50px;
     height: 20px;
+    
   }
   
   .toggle {
+
     opacity: 0;
     width: 0;
     height: 0;
@@ -79,8 +81,9 @@ li.active a:hover::after {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--bg-colorcolor);
+    /* background-color: var(--bg-colorcolor); */
     transition: 0.3s;
+
   }
   
   .slider:before {
@@ -96,12 +99,22 @@ li.active a:hover::after {
     background-color: var(--bg-color);
     box-shadow: 0 3px 0 var(--main-color);
     transition: 0.3s;
+    background-image: url('../../../assets/iconos/night.png');
+    background-size: 50%;
+    background-repeat: no-repeat; 
+    background-position: center;
+
   }
   
   .toggle:checked + .slider {
     background-color: var(--input-focus);
+
   }
   
   .toggle:checked + .slider:before {
+    background-image: url('../../../assets/iconos/sun.png');
+    background-size: 50%;
+    background-repeat: no-repeat; 
+    background-position: center;
     transform: translateX(30px);
   }

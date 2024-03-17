@@ -1,0 +1,35 @@
+
+<main  onload="searchEvent() ; mostrarGrafico()">
+    <nav>
+    <div class="selector">
+        <label for="jsonSelector">Selecciona un JSON:</label>
+        <select id="jsonSelector">
+            <option value="pokemon">POKEMON</option>
+            <option value="municipios">MUNICIPIOS</option>
+            <option value="movies">MOVIES</option>
+            <option value="meteoritos">METEORITOS</option>
+        </select>
+    </div>
+    <div class="botones">
+        <button class="printList" onclick="escogerTabla()">Print List</button>
+        <button class="mostrarTabla" onclick="mostrarTabla()">Mostrar Tabla</button>
+        <button class="mostrarTabla" onclick="grafico()">Mostrar Grafica</button>
+        <button class="reload" onclick="reload()">Refresh</button>
+        <button onclick="orderList('asc')">Orden Ascendente</button>
+        <button onclick="orderList('des')">Orden Desdendente</button>
+        <label for="txtSearch">Search</label>
+        <input type="text" value="" id="txtSearch" />
+    </div>
+    </nav>
+    <div class="data">
+        <!-- <div class="grafica">
+            <div class="chart-container" style="position: relative; width:500px" >
+                <canvas id="myChart"></canvas>
+            </div>
+        </div> -->
+
+        <div id="tableContainer"></div>
+    </div>
+</main>
+<script src="ejercicioArrays.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

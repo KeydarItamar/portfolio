@@ -1,0 +1,58 @@
+main{
+    background-image: url('/assets/keyboard/image.jpg');
+    background-size: cover; /* Para cubrir todo el espacio del div */
+    background-position: center; /* Para centrar la imagen */
+    background-repeat: no-repeat; /* Para que la imagen no se repita */
+    height: 100%;
+    border: 1px solid black;
+}
+h1{
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:xx-large;
+    text-shadow: 0 0 5px #dc0965;
+    /* color:#dc0965; */
+    
+}
+
+.keys{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.key{
+    border-radius: 2px;
+    border: 3px solid black;
+    margin: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem .5rem;
+    width: 100px;
+    transition: all 0.07s;
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,0.4);
+    text-shadow: 0 0 5px black;
+}
+
+kbd{
+    display: block;
+    font-size: 40px;
+}
+
+.playing{
+    transform:scale(1.1);
+    border-color:#dc0965;
+    box-shadow: 0 0 10px #dc0965;
+}
+
+.sound{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #dc0965;
+}

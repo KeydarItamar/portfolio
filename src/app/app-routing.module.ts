@@ -3,11 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { Project1Component } from './moduls/Crypto/project1.component';
 import { HackatonComponent } from './moduls/hackaton/hackaton.component';
 import { PokeapiComponent } from './moduls/pokeapi/pokeapi.component';
+import { TablasComponent } from './moduls/tablas/tablas.component';
+import { KeyboardComponent } from './moduls/keyboard/keyboard.component';
 const routes: Routes = [
   {path: '', component: HackatonComponent},
   {path: 'MWC2024 Hackaton', component: HackatonComponent},
   {path: 'Apires Crypto', component: Project1Component},
-  {path: 'Pokeapi',component: PokeapiComponent}
+  {path: 'Pokeapi',component: PokeapiComponent},
+  {path: 'Tables', component: TablasComponent},
+  {path: 'Keyboard', component: KeyboardComponent}
+
 ];
 
 @NgModule({

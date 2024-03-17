@@ -1,41 +1,85 @@
 <main>
   
-  <div class="buscador">
-    <div class="description">
-      <h2>Api rest of Cryptocurrency made it with Java Spring</h2>
-      <br>
-      <p>Simple api rest where you can find a little information about Crypto.</p>
+    <div class="buscador">
+        <div class="description">
+            <h2>Api rest of Cryptocurrency made it with Java Spring</h2>
+            <br>
+            <h3>Here you can find basic CRUD options</h3>
+        </div>
+        <div class="flip-card" #flipCard>
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div class="input-box">
+                        <label for="search">Search for a Crypto</label>
+                        <input type="text" id="text" name="text" placeholder="Write something..." (change)="searchCrypto()">
+                        <br>
+                        <label for="delete">Delete a Crypto</label>
+                        <input type="text" id="delete" name="text" placeholder="Write something..." (change)="deleteCrypto()">
+                        <br>
+                        <label for="insert">Insert a Crypto</label>
+                        <button  (click)="flipCardFunction()"> Insert data </button>
+                        <button (click)="refresh()"> Refresh </button>
+                        <div class="code-check"><p>Check the code on github</p><img src="../../../assets/iconos/icons8-github-svg.webp" alt=""></div>
+                    </div>
+                </div>
+                <div class="flip-card-back ">
+                    <div class="input-box">
+                        <form #cryptoForm="ngForm" (ngSubmit)="agregarCriptomoneda(cryptoForm)">
+                            <label for="nombre">Name:</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Insert name..." ngModel required>
+                            <br>
+                            <label for="sigla">Initials:</label>
+                            <input type="text" id="sigla" name="sigla" placeholder="Insert initial..." ngModel required>
+                            <br>
+                            <label for="precio">Price:</label>
+                            <input type="number" id="precio" name="precio" step="0.01" placeholder="Insert price..." ngModel required pattern="[0-9]{1,4}">
+                            <br>
+                            <label for="descripcion">Description:</label>
+                            <input type="text" id="descripcion" name="descripcion" placeholder="Description..." ngModel required>
+                            <br>
+                            <button type="submit">Add Crypto</button>
+                        </form>
+                        <button (click)="flipCardFunction()">Go Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </div>
-    <div class="techno">
-      <h3>Technologies used:</h3>
-      <ul>
-        <li>Java Spring whith Eclipse IDE</li>
-        <li>Postgress Sql as data base</li>
-        <li>This website to show it whith Angular</li>
-      </ul>
-  </div>
-  <div class="input-box">
-    <label for="text">Search for a Crypto</label>
-    <input type="text" id="text" name="text" placeholder="Write something..." (change)="searchCrypto(  )">
-  </div>
+
+    <div class="card-container" *ngIf="!resultadoExiste">  
+        <div class="card" *ngFor="let cripto of Criptomonedas">
+            <div class="content-box">
+                <span class="card-title">{{cripto.nombre}}</span>
+                <p class="card-content">
+                   {{cripto.descripcion}}
+                </p>
+                <span class="see-more"> Market cap: {{cripto.cap_mercado}} M</span>
+            </div>
+            <div class="date-box">
+                <span class="month">{{cripto.sigla}}</span>
+                <span class="date">{{cripto.precio}}$</span>
+            </div>
+        </div>
+    </div>
+    <div class="card-container" *ngIf="resultadoExiste">  
+      <div class="card">
+          <div class="content-box">
+              <span class="card-title">{{resultados.nombre}}</span>
+              <!-- <p > -->
+                <div class="card-content">{{resultados.descripcion}} </div>
+              
+              <span class="see-more">{{resultados.volumen_24h}}</span>
+          </div>
+          <div class="date-box">
+              <span class="month">{{resultados.sigla}}</span>
+              <span class="date">{{resultados.precio}}$</span>
+          </div>
+      </div>
   </div>
 
-    <div class="cards" *ngIf="!resultadoExiste" >
-            <div class="card" *ngFor="let cripto of Criptomonedas">
-              <h5 class="card-title">{{cripto.nombre}}</h5>
-              <p class="card-text">{{cripto.precio}}$</p>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="card-link">Market cap : {{cripto.cap_mercado}}</a>
-              <a href="#" class="card-link"> Volumen: {{cripto.volumen_24h}}</a>
-            </div>
-    </div>
-    <div class="cards" *ngIf="resultadoExiste" >
-      <div class="card" *ngFor="let cripto of resultados">
-        <h5 class="card-title">{{cripto.nombre}}</h5>
-        <p class="card-text">{{cripto.precio}}$</p>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="card-link">Market cap : {{cripto.cap_mercado}}</a>
-        <a href="#" class="card-link"> Volumen: {{cripto.volumen_24h}}</a>
-      </div>
-</div>
+
+
+ 
 </main>
+
