@@ -1,13 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { ViewChild, ElementRef } from '@angular/core';
-import { AfterViewInit, Renderer2,  } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+  selector: 'app-trends',
+  templateUrl: './trends.component.html',
+  styleUrls: ['./trends.component.css']
 })
-export class ContactComponent {
+export class TrendsComponent  implements OnInit{ 
   constructor() { }
 
   keywords: string[] = [];
@@ -19,8 +17,8 @@ export class ContactComponent {
   increasing: boolean = true;
 
   ngOnInit(): void {
-    this.keywords[0]= 'Dogs'
-    this.embedGoogleTrends();
+    // this.keywords[0]= 'Dogs'
+    // this.embedGoogleTrends();
   }
 
   changeCurrentNumber() {

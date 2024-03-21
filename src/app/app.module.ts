@@ -16,6 +16,10 @@ import { PokeapiComponent } from './moduls/pokeapi/pokeapi.component';
 import { FormsModule } from '@angular/forms';
 import { TablasComponent } from './moduls/tablas/tablas.component';
 import { KeyboardComponent } from './moduls/keyboard/keyboard.component';
+import { TrendsComponent } from './moduls/trends/trends.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -31,6 +35,7 @@ import { KeyboardComponent } from './moduls/keyboard/keyboard.component';
     PokeapiComponent,
     TablasComponent,
     KeyboardComponent,
+    TrendsComponent,
     
   ],
   imports: [

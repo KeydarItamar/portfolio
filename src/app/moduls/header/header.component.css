@@ -25,6 +25,10 @@ ul:hover{
     cursor: pointer;
 }
 
+li{
+  font-family: 'Mifuente';
+
+}
 li.active a {
     position: relative;
   }

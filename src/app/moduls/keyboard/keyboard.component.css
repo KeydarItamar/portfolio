@@ -1,5 +1,5 @@
 main{
-    background-image: url('/assets/keyboard/image.jpg');
+    /* background-image: url('/assets/keyboard/image.jpg'); */
     background-size: cover; /* Para cubrir todo el espacio del div */
     background-position: center; /* Para centrar la imagen */
     background-repeat: no-repeat; /* Para que la imagen no se repita */
@@ -34,9 +34,9 @@ h1{
     width: 100px;
     transition: all 0.07s;
     text-align: center;
-    color: white;
-    background: rgba(0,0,0,0.4);
-    text-shadow: 0 0 5px black;
+    /* color: white; */
+    background: rgba(243, 186, 218, 0.4);
+    text-shadow: 0 0 5px rgb(176, 8, 95);
 }
 
 kbd{

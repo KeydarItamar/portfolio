@@ -5,10 +5,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent implements OnInit {
-proyectos: string[]= ['MWC2024 Hackaton', 'Apires Crypto','Pokeapi','Tables','Keyboard']
+proyectos: string[]= ['Pokeapi','MWC2024 Hackaton', 'Apires Crypto','Keyboard','Google trends']
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  selectedProyecto: string | null = 'Pokeapi';
+
+  selectProyecto(proyecto: string) {
+    this.selectedProyecto = proyecto;
   }
 
 }

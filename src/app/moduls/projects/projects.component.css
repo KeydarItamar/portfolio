@@ -53,3 +53,6 @@ span{
 span:hover{
     scale: 1.4
 }
+.selected {
+    background-color: #fb3f907e;
+}
