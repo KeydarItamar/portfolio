@@ -17,8 +17,8 @@ export class TrendsComponent  implements OnInit{
   increasing: boolean = true;
 
   ngOnInit(): void {
-    // this.keywords[0]= 'Dogs'
-    // this.embedGoogleTrends();
+    this.keywords[0]= 'Talent'
+    this.embedGoogleTrends();
   }
 
   changeCurrentNumber() {

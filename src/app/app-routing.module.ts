@@ -7,9 +7,9 @@ import { TablasComponent } from './moduls/tablas/tablas.component';
 import { KeyboardComponent } from './moduls/keyboard/keyboard.component';
 import { TrendsComponent } from './moduls/trends/trends.component';
 const routes: Routes = [
-  {path: '', component: PokeapiComponent},
+  {path: '', component: Project1Component},
   {path: 'MWC2024 Hackaton', component: HackatonComponent},
-  {path: 'Apires Crypto', component: Project1Component},
+  {path: 'Apirest Crypto', component: Project1Component},
   {path: 'Pokeapi',component: PokeapiComponent},
   {path: 'Tables', component: TablasComponent},
   {path: 'Keyboard', component: KeyboardComponent},
