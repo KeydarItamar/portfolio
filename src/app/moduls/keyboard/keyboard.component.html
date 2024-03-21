@@ -1,0 +1,26 @@
+<main>
+    <h1>Music Keyboard</h1>
+    <h1 style="font-size: large">Press any key on your keyboard to play music!</h1>
+    <div class="keys">
+        <div *ngFor="let key of keys" [class.key]="true" [attr.data-key]="key.keyCode">
+            <kbd>{{ key.key }}</kbd>
+            <span class="sound">{{ key.sound }}</span>
+        </div>
+    </div>
+</main>
+<audio data-key="65" src="/assets/keyboard/sonidos/clap.wav"></audio>
+<audio data-key="83" src="/assets/keyboard/sonidos/hihat.wav"></audio>
+<audio data-key="68" src="/assets/keyboard/sonidos/kick.wav"></audio>
+<audio data-key="70" src="/assets/keyboard/sonidos/openhat.wav"></audio>
+<audio data-key="71" src="/assets/keyboard/sonidos/boom.wav"></audio>
+<audio data-key="72" src="/assets/keyboard/sonidos/ride.wav"></audio>
+<audio data-key="74" src="/assets/keyboard/sonidos/snare.wav"></audio>
+<audio data-key="75" src="/assets/keyboard/sonidos/Bateria Tama/snare 3.wav"></audio>
+<audio data-key="76" src="/assets/keyboard/sonidos/tom.wav"></audio>
+<audio data-key="90" src="/assets/keyboard/sonidos/piano/do.wav"></audio>
+<audio data-key="88" src="/assets/keyboard/sonidos/piano/re.wav"></audio>
+<audio data-key="67" src="/assets/keyboard/sonidos/piano/mi.wav"></audio>
+<audio data-key="86" src="/assets/keyboard/sonidos/piano/fa.wav"></audio>
+<audio data-key="66" src="/assets/keyboard/sonidos/piano/sol.wav"></audio>
+<audio data-key="78" src="/assets/keyboard/sonidos/piano/la.wav"></audio>
+<audio data-key="77" src="/assets/keyboard/sonidos/piano/si.wav"></audio>

@@ -1,0 +1,100 @@
+/* Estilos CSS para los botones */
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+#tableContainer {
+    margin-top: 3%;
+    width: 50%; /* O cualquier ancho deseado */
+    height: 60vh; /* O cualquier altura deseada */
+    overflow: auto;
+}
+nav{
+    display: flex;
+    justify-content: center;
+}
+.data{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    text-align: center;
+}
+.botones button {
+    background-color: #4CAF50; /* Color de fondo */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    /* font-family: 'Press Start 2P', cursive; Fuente estilo pixel */
+}
+
+
+.botones button:nth-child(5),
+.botones button:nth-child(6) {
+    background-color: #0000ff;
+}
+
+.botones label {
+    color: white;
+}
+
+.botones input[type="text"] {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Estilos para el selector */
+.selector label {
+    color: white;
+}
+
+.selector select {
+    font-family: 'Press Start 2P', cursive; /* Fuente estilo pixel */
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+table {
+    border-radius: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    font-family: 'Mifuente';
+    font-size: small;
+}
+  
+th {
+padding:5px ;
+text-align: left;
+background-color: #dc0965;
+border-bottom: 2px solid #ddd;
+}
+
+td {
+padding: 5px;
+border-bottom: 1px solid #ddd;
+}
+
+/* Estilos para las filas impares */
+tbody tr:nth-child(odd) {
+background-color: #9c2d5d65;
+}
+
+/* Estilos para las filas al pasar el mouse */
+tbody tr:hover {
+background-color: #f2f2f2;
+}
+
+/* Estilos para las celdas de datos en la primera columna */
+td:first-child {
+font-weight: bold;
+  }

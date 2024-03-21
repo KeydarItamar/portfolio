@@ -1,0 +1,13 @@
+<div class="project-container">
+    <h2>My little projects</h2>
+    <div class="enlaces">
+        <ul *ngFor="let proyecto of proyectos">
+            <li routerLink="{{proyecto}}" [class.selected]="selectedProyecto === proyecto" (click)="selectProyecto(proyecto)">
+                <span>{{proyecto}}</span></li>
+        </ul>
+    </div>
+    <div class="router-div">
+        <router-outlet></router-outlet>
+    </div>
+
+</div>

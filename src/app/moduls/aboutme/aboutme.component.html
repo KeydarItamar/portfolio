@@ -1,0 +1,53 @@
+
+<div class="about-container">
+    <h2>About me</h2>
+    <div class="container">
+      <div class="card Technologies" (mouseenter)="expandCard('Technologies')" (mouseleave)="collapseCards()">
+        <h2>Technologies</h2>
+        <div class="info" *ngIf="expandedCard === 'Technologies'">
+            <ul>
+                <li>Html, css, Javascript </li>
+                <li>Python, FastApi, Django</li>
+                <li>Java, Spring</li>
+                <li>Php, Laravel</li>
+                <li>Postgress, MongoDb</li>
+                <li>Git & Github/Gitlab</li>
+                <li>Docker</li>
+            </ul>
+            <br>
+            <p>This is done with Angular!</p>
+        </div>
+      </div>
+      <div class="card Soft Skills" (mouseenter)="expandCard('SoftSkills')" (mouseleave)="collapseCards()">
+        <h2>SoftSkills</h2>
+        <div class="info" *ngIf="expandedCard === 'SoftSkills'">
+          <!-- Texto relevante para SoftSkills -->
+          <ul>
+           <li> Enthusiastic</li>
+           <li> Highly self-sufficient </li>
+           <li> Friendly </li>
+           <li> Effective mentor</li>
+           <li> Quick learner</li>
+           <li> Public speaking skills</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card Who" (mouseenter)="expandCard('Who')" (mouseleave)="collapseCards()">
+        <h2>Experience</h2>
+        <div class="info" *ngIf="expandedCard === 'Who'">
+            <ul>
+                <li>Graduated in Web Application Development</li>
+                <li>Trainee full-stack at Irish Technology.</li>
+                <li>Self-educated through numerous online courses</li>
+            </ul>
+            <a href="https://www.linkedin.com/in/itamar-keydar-antoni-a4970726a">
+                <img class="link-icono" src="../../../assets/iconos/icons8-linkedin-svg.webp" alt="linkedin-link">
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
