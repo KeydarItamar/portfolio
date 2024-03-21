@@ -1,5 +1,6 @@
-<!-- <h1>IRIS TRENDS</h1>
-<section>
+<main class="home"> 
+<h1>Google TRENDS</h1>
+<section class="inputs">
     <ul *ngFor="let number of numbers">
         <input matInput placeholder="Input {{number}}" #inputField [hidden]="currentNumber < number"
         [(ngModel)]="keywords[number - 1]">
@@ -10,9 +11,11 @@
 
     <button mat-raised-button (click)="embedGoogleTrends()" color="primary">Enviar</button>
 </section>
+<div class="grafico">
+    <section id="trends-graph"></section>
+    <section id="trends-bar-chart"></section>
+</div>
+</main>
 
-<section id="trends-graph"></section>
 
-<section id="related-topics"></section>
 
-<section id="trends-bar-chart"></section> -->
