@@ -83,7 +83,6 @@ button:hover{
 .angry-grid {
    display: grid; 
    /* border: 1px solid violet; */
-  width: 50vw;
    grid-template-rows: 1fr 1fr 1fr;
    grid-template-columns: 1fr 4fr 1fr 1fr;
    
@@ -149,5 +148,39 @@ button:hover{
 }
 
 
+@media (max-width: 578px) {
+  .home{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .angry-grid{
+    margin-top: -50%;
+    display: grid;
+    gap: 20px;
+    padding: 3%;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  #item-0{
+   display: none;
+   grid-row-start: 1;
+   grid-column-start: 1;
+
+   grid-row-end: 2;
+   grid-column-end: 3;
+   display: flex;
+   align-items: flex-end;
+  }
+  .span-12{
+    margin-left:0%;
+    height: 40px;
+    width: 40px;
+  }
+  .item-2, h2{
+    font-size: larger;
+  }
+}
 
 

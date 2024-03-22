@@ -17,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 import { TablasComponent } from './moduls/tablas/tablas.component';
 import { KeyboardComponent } from './moduls/keyboard/keyboard.component';
 import { TrendsComponent } from './moduls/trends/trends.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
 
@@ -42,7 +43,9 @@ import { TrendsComponent } from './moduls/trends/trends.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatProgressSpinnerModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

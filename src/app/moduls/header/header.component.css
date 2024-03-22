@@ -123,3 +123,12 @@ li.active a:hover::after {
     background-position: center;
     transform: translateX(30px);
   }
+
+  @media (max-width: 578px) {
+    ul{
+      display: none;
+   }
+   .header-container{
+   justify-content: space-evenly;
+   }
+}

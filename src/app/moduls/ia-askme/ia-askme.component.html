@@ -1,26 +1,32 @@
 
-<div class="ia-container">
-<h2>Chat with me!</h2>
-<div class="body-ia">
-    <div class="imagen"><img class="imagen" src="../../../assets/imagenes/yop-blanco.webp" alt=""></div>
+<main>
+    <div class="icono-Itic" >
+        <img class="icono-Itic" src="../../../assets/imagenes/yop.png" alt="This is me!">
+        <p></p>
+    </div>
     <div class="chatbox-container">
+        <h3>This is an AI trained with my data, so feel free to ask!</h3>
         <div class="response-container">
-            <ul *ngFor="let respuesta of respuestas let i= index " >
+            <ul *ngFor="let query of listaQuerys let i= index " >
                 <li *ngIf=respuestas>
                     <h4>User promtp</h4>
                     <p>{{listaQuerys[i]}}</p>
                     <h4>Ia response</h4>
-                    <p>{{respuestas[i]}} {{i}}</p>
+                    <mat-progress-spinner *ngIf="!respuestas[i]"
+                        class="example-margin"
+                        [color]="color"
+                        [mode]="mode"
+                        [value]="value">
+                     </mat-progress-spinner>
+                 <div class="query" [innerHTML]="respuestas[i]" style="white-space: pre-line"></div>
                 </li>
             </ul>
         </div>
+        
         <input  type="text" id="query" name="query" 
-        placeholder="introduce algo.."
+        placeholder=" Ask me something..."
         #queryInput
         (keyup.enter)="iaChat(queryInput.value); queryInput.value = '' "
         style="height: 3rem; width: 100%;">
-
     </div>
-<div>
-
-</div>
+</main>
