@@ -16,7 +16,7 @@ h2{
     flex-direction: column;
 }
 .router-div{
-    height: 100%;
+    height: auto;
     width: 100%;
 }
 .enlaces{
@@ -66,5 +66,11 @@ span:hover{
     }
     span:hover{
         scale: 1.1
+    }
+
+    .router-div{
+       overflow:  auto;
+       box-shadow:rgba(246, 79, 198, 0.262) 30px 40px 40px -10px;
+
     }
 }

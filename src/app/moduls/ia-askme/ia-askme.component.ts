@@ -19,14 +19,14 @@ export class IaAskmeComponent implements OnInit {
   color: ThemePalette = 'accent';
   mode: ProgressSpinnerMode = 'indeterminate';
   value = 25;
-  imageColor!: string;
-
-  constructor(private chatService: ChatService) { }
   
+  constructor(private chatService: ChatService) { }
+
   ngOnInit(): void {
   }
  
   iaChat(query: string): void {
+    this.listaQuerys.push(query)
     this.chatService.enviarDatosAlBackend(query)
       .subscribe({
          next: response => {
@@ -39,5 +39,6 @@ export class IaAskmeComponent implements OnInit {
        });
     query = '';
   }
+
 
 }
