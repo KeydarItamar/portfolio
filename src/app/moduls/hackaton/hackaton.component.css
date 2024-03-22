@@ -41,3 +41,23 @@ li{
 }
 
 
+
+@media (max-width: 578px) {
+    p{
+        font-size: x-small;
+    }
+
+    .hack-container{
+        flex-direction: column;
+     }
+     .description {
+        padding: 3%;
+        height: 100%;
+        width: 80%;
+    
+    }
+    
+    li{
+        font-size: small;
+    }
+}

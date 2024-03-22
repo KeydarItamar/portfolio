@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ChatService } from 'src/app/chat.service';
+import {ThemePalette} from '@angular/material/core';
+import {ProgressSpinnerMode} from '@angular/material/progress-spinner';
+import { DarkService } from 'src/app/dark.service';
+
 
 @Component({
   selector: 'app-ia-askme',
@@ -12,9 +16,13 @@ export class IaAskmeComponent implements OnInit {
   listaQuerys: string[]= []
   respuestas: string[]=[]
   resultado: string=''
+  color: ThemePalette = 'accent';
+  mode: ProgressSpinnerMode = 'indeterminate';
+  value = 25;
+  imageColor!: string;
 
   constructor(private chatService: ChatService) { }
-
+  
   ngOnInit(): void {
   }
  

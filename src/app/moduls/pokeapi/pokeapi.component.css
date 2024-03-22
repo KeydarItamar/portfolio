@@ -238,3 +238,65 @@ table {
     max-height: 50vh;
     border-radius: 15px;
   }
+  @media (max-width: 578px) {
+  
+    main{
+      height: 100%;
+    }
+    section{
+     display: flex;
+     flex-direction: column; 
+  }   
+  .img-div{
+    width: 20%;
+}
+.hab{
+  font-size: small;
+
+}
+  .num1{
+    order: 1;
+    width: 90%;
+  }
+  
+  .num2{
+    order: 2;
+    width: 90%;
+  }
+  
+  .num3{
+    order: 5;
+    width: 90%;
+  }
+  
+  .num4{
+    order: 4;
+    width: 90%;
+  }
+  
+  .num5{
+    order: 3;
+    width: 90%;
+  }
+  
+  
+  .num6{
+    order: 6;
+    width: 90%;
+  }
+  
+  
+  .num7{
+    order: 7;
+    width: 90%;
+  }
+  .num8{
+    width: 90%;
+    order: 8;
+  }
+  .num9{
+    width: 90%;
+    order: 9;
+  }
+  
+  }

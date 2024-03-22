@@ -56,3 +56,15 @@ span:hover{
 .selected {
     background-color: #fb3f907e;
 }
+
+@media (max-width: 578px) {
+    .enlaces ul:nth-child(5) {
+      display: none;
+    }
+    span{
+   font-size: x-small;
+    }
+    span:hover{
+        scale: 1.1
+    }
+}

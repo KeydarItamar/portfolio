@@ -30,10 +30,6 @@ scrollToSection(sectionId: string) {
     section.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }
-changeImageColor() {
-  // Cambiar el color de la imagen utilizando el servicio
-  this.dark.setImageColor('black');
-}
 
 
 DarkMode(){

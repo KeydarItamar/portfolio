@@ -1,6 +1,8 @@
-*{
-    margin: 0%;
+* {
     padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
 }
 h2{
     font-size: xx-large;
@@ -17,29 +19,60 @@ h2{
     align-items: center;
     flex-direction: column;
 }
-.chatbox-container{
-    border: 1px solid black;
-    height: 100%;
-    width: 60%;
-    float: inline-end;
-    float: right;    
-    margin-right: 3rem;
+
+.icono-Itic {
+    height: 500px;
+    width: 500px;
+    margin-left: 5%;
+    margin-right: 15%;
 }
-.response-container{
-    height: 60vh;
-    width: 100%;
-    border: 1px solid black;
-    
-}
-.body-ia{
-    height: 100%;
-    width: 100%;
+
+.chatbox-container {
+    margin-right: 5%;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column; 
+    flex: 1; 
 }
+
+.response-container {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    background-color:  rgba(4, 4, 4, 0.46);
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 45px;
+}
+
+
+#query {
+    height: 3rem;
+    width: calc(100% - 40px); /* ajustar el ancho para dejar espacio para el icono */
+    padding-left: 45px; /* agregar espacio a la derecha del input para el icono */
+    background-image: url('../../../assets/iconos/lupa.png');
+    background-repeat: no-repeat;
+    background-position: 20px center; /* posicionar el icono en el centro a la derecha */
+    background-size: 24px 24px; /* ajustar el tamaño del icono según sea necesario */
+    border-radius: 45px;
+
+}
+
+.response-container > ul{
+    color: white;
+    list-style: none;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+input {
+    background-color: rgba(251, 251, 251, 0.759);
+    border: 0px;
+}
+
+input:focus {
+    outline: none;
+  }
+
 .imagen{
-    width: 70%;
-    margin-right: 0%;
+    filter: invert();
 }
