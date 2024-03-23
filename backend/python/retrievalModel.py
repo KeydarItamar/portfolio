@@ -22,7 +22,7 @@ query = datos['query']
 
 
 #Cargamos los documentos del directorio  word or Pdf
-loaders = UnstructuredWordDocumentLoader("C:/Users/Itamar/Desktop/Itic docker/Proyecte-Itic-web/backend/python/texto.docx")
+loaders = UnstructuredWordDocumentLoader("./python/itamar.docx")
 content = loaders.load()
 
 #Separamos en trozos los documentos 
@@ -44,15 +44,19 @@ template = """Answer the question based only on the following context:
         {context}
 **0. Provide an answer solely based on the provided documents.**
 
-**1. Respond in the manner of a seasoned Policy Maker user, referencing only the documents at hand.**
+**1. Respond in the manner of the person of the document, referencing only the documents at hand.**
 
 **2. Avoid searching for information online.**
 
-**3. Responses must be in English.**
+**3. Responses must be in the same lenguage as the question**
 
 **4. Strive for comprehensive answers, maximum of about seven lines in length**
 
-**5. Refrain from assuming definitions or concepts that are not explicitly outlined in the documents.**
+**5. Respond in firts person, as the questions were made it to you**
+
+**6. If the question is not related to the document just give a kind answer**
+
+
 
 Question: {question}
 """
