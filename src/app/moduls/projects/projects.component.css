@@ -73,7 +73,6 @@ span:hover{
 
     .router-div{
        overflow:  auto;
-       box-shadow:rgba(246, 79, 198, 0.262) 30px 40px 40px -10px;
        min-height: 100vh;
        margin-bottom: 50%;
     }
