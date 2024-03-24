@@ -16,7 +16,7 @@ export class IaAskmeComponent implements OnInit {
   listaQuerys: string[]= []
   respuestas: string[]=[]
   resultado: string=''
-  color: ThemePalette = 'accent';
+  color: ThemePalette = 'primary';
   mode: ProgressSpinnerMode = 'indeterminate';
   value = 25;
   

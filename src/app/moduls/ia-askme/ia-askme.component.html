@@ -5,19 +5,16 @@
         <p></p>
     </div>
     <div class="chatbox-container">
-        <h3>This is an AI trained with my data, so feel free to ask!</h3>
         <div class="response-container">
+            <div class="cabecera-chat" *ngIf="!listaQuerys[0]">
+                <h3 >This is an AI trained with my data, so feel free to ask!</h3>
+            </div>
             <ul *ngFor="let query of listaQuerys let i= index " >
                 <li *ngIf=respuestas>
                     <h4>User promtp</h4>
                     <p>{{listaQuerys[i]}}</p>
                     <h4>Ia response</h4>
-                    <mat-progress-spinner *ngIf="!respuestas[i]"
-                        class="example-margin"
-                        [color]="color"
-                        [mode]="mode"
-                        [value]="value">
-                     </mat-progress-spinner>
+                    <p *ngIf="!respuestas[i]">Waiting for server...</p>
                  <div class="query" [innerHTML]="respuestas[i]" style="white-space: pre-line"></div>
                 </li>
             </ul>

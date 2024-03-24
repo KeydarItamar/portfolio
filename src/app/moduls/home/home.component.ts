@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ElementRef } from '@angular/core';
-import { DarkService } from 'src/app/dark.service';
+
 
 @Component({
   selector: 'app-home',
@@ -13,10 +12,11 @@ export class HomeComponent implements OnInit {
 
   }
   descargarDocumento(){
-
+    const pdfUrl = 'assets/data/Itamar Keydar.pdf';
+    window.open(pdfUrl, '_blank');
   }
 
-  constructor(private elementRef: ElementRef) {}
+  constructor() {}
 
  
  
