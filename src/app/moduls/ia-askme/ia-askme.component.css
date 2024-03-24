@@ -5,11 +5,17 @@
    
 }
 h3{
+    align-items: center;
     justify-content: center;
     display: flex;
     padding: 1%;
 }
-
+.cabecera-chat{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 main {
     padding-top: 4%;
     width: 100%;
@@ -33,13 +39,15 @@ main {
     
     
 }
-
+p{
+line-height: 2;    
+}
 .response-container {
     height: 60vh;
     display: flex;
     flex-direction: column;
     box-shadow:  5px 8px #dc0965;
-
+    padding: 5%;
     margin-bottom: 3%;
     max-height: 100%;
     max-width: 100%;

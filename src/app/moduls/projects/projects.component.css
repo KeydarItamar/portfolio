@@ -58,6 +58,9 @@ span:hover{
 }
 
 @media (max-width: 578px) {
+    .project-container{
+        margin-top: 50%;
+    }
     .enlaces ul:nth-child(5) {
       display: none;
     }
@@ -71,7 +74,8 @@ span:hover{
     .router-div{
        overflow:  auto;
        box-shadow:rgba(246, 79, 198, 0.262) 30px 40px 40px -10px;
-
+       min-height: 100vh;
+       margin-bottom: 50%;
     }
     h2{
         margin: 10%;
